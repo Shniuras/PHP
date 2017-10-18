@@ -252,7 +252,7 @@ function uzduotis2($dices){
 function uzduotis3(){
     $temperatures = [1, -2, 0.5, -1, -0.5, 5, -3];
 
-    $closest = $temperatures[0];
+    $closest = $temperatures[0]; //1
 
     foreach ($temperatures as $t){
         if(abs($t) < abs($closest)){
@@ -262,7 +262,24 @@ function uzduotis3(){
     echo "Closest to 0 temperature is " . $closest;
 }
 
+//Uzduotis Nr.4
 
+function exam($pazymys){
+    $user = ["Tadas", "Jonas", "Petras", "Kazys"];
+    $mark = [];
+
+    for($i=0; $i<count($user); $i++){
+        $mark[$i]=rand(1,10);
+    }
+
+    $users = array_combine($user, $mark);
+
+    foreach ($users as $u){
+        if($user>$pazymys){
+            echo $u . "\n";
+        }
+    }
+}
 
 array_shift($argv);
 //$argv yra pre-defined kintamasis;
