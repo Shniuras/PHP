@@ -264,7 +264,7 @@ function uzduotis3(){
 
 //Uzduotis Nr.4
 
-function exam($pazymys){
+function exam($vardas){
     $user = ["Tadas", "Jonas", "Petras", "Kazys"];
     $mark = [];
 
@@ -273,12 +273,36 @@ function exam($pazymys){
     }
 
     $users = array_combine($user, $mark);
+    var_dump($users);
 
-    foreach ($users as $u){
-        if($user>$pazymys){
-            echo $u . "\n";
+   $student = $users[$vardas];
+
+    foreach ($users as $u => $m){
+        if($student > $m){
+            echo "Uz " . $vardas . " gavo maziau " . $u . "-" . $m . "\n";
         }
     }
+
+    /* ARBA
+ $students = [
+         ["user" => "Tadas", "mark" => rand(1,10)],
+         ["user" => "Jonas", "mark" => rand(1,10)],
+         ["user" => "Petras", "mark" => rand(1,10)],
+         ["user" => "Kazys", "mark" => rand(1,10)],
+ ];
+
+   $ref=null;
+
+    foreach($users as $user) {
+        if($user["student] == $reference){
+        $ref = $user["mark"];
+        }
+    }
+    echo "This student got " . $ref . "\n";
+
+    foreach ($users as $user
+
+  */
 }
 
 array_shift($argv);
